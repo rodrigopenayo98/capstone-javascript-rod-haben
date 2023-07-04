@@ -1,3 +1,66 @@
-h1 {
-  color: orange;
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter',sans-serif;
+}
+
+:root {
+  --darkBg: #17161B;
+  --lightBg: #1D1D1F;
+  --redBg: #EA1C24;
+}
+
+body {
+  background-color: var(--darkBg);
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid #8e8e8e;
+  border-width: thin;
+}
+
+.app-logo {
+  width: 15%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap:2rem;
+}
+
+.app-navigation {
+  flex: 1;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  color: var(--redBg);
+}
+
+.profile-container {
+  display: flex;
+  gap:3px;
+}
+
+.profile {
+  width:2rem;
+  height:2rem;
+  background-color: #fff;
+  border-radius: 100%;
 }
