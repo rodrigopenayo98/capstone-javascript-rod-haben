@@ -1,27 +1,25 @@
-const series = ["2993", "7194", "28826", "1101", "82", "73"];
 
+const series = ["2993", "7194", "28826", "1101", "82", "73"];
 
 const getSeries = async () => {
   try {
-    const seriesData = [];
+    const infoSeries = [];
     for (const id of series) {
       const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
       const data = await response.json();
-      seriesData.push({
+      infoSeries.push({
         id: data.id,
         name: data.name,
-        summary: data.summary
+        summary: data.summary,
+        image: data.image.medium
       });
     }
-    console.log(seriesData);
-    return seriesData;
+    return infoSeries;
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
     return [];
   }
 };
 
-getSeries();
-
-
+export { getSeries };
 
