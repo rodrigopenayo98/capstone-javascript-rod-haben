@@ -1,45 +1,27 @@
-const searchInput = document.getElementById('search-input');
+const series = ["2993", "7194", "28826", "1101", "82", "73"];
 
-searchInput.addEventListener('search', () => {
-  const query = searchInput.value;
-  // here I have to return in a specific html element the list of movie letters
-});
 
-const getArticles = async (query) => {
+const getSeries = async () => {
   try {
-    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
-    const data = await response.json();
-    const articles = data.map((item) => ({
-      id: item.show.id,
-      name: item.show.name,
-    }));
-
-    return articles;
+    const seriesData = [];
+    for (const id of series) {
+      const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
+      const data = await response.json();
+      seriesData.push({
+        id: data.id,
+        name: data.name,
+        summary: data.summary
+      });
+    }
+    console.log(seriesData);
+    return seriesData;
   } catch (error) {
     console.error('Error:', error);
     return [];
   }
 };
 
-const getArticleDetails = async (articleId) => {
-  try {
-    const response = await fetch(`https://api.tvmaze.com/shows/${articleId}`);
-    const data = await response.json();
+getSeries();
 
-    const articleDetails = {
-      id: data.id,
-      name: data.name,
-      summary: data.summary,
-
-    };
-
-    return articleDetails;
-  } catch (error) {
-    console.error('Error:', error);
-    return null;
-  }
-};
-
-const api = `https://api.tvmaze.com/search/shows?q=${query}`;
 
 
