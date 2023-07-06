@@ -16,10 +16,11 @@ const modalTemplate = (show) => {
                 <img src="${show.image.medium}" alt="" class="modal-hero-image">
                 <h3 class="text-center modal-show-title">${show.name}</h3>
                 <p class='show-summary'> ${show.summary}</p>
-                <div class="comments">
-                  <h3 class="text-center">Comments (2)</h3>
-                  <ul class="comments-list">
-                  </ul>
+                <div id="comments-container">
+                  <h3 id="comment-title">Comments (2)</h3>
+                  <div id="comments-list">
+                   
+                  </div>
                 </div>
                 <div id="form-test">
                 <h4>Add a Comment</h4>
