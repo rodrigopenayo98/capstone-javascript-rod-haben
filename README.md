@@ -107,6 +107,7 @@ Linters
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Rodrigo Penayo**
+
 👤 **Haben Mehari**
 
 - GitHub: [@rodrigopenayo98](https://github.com/rodrigopenayo98)
