@@ -1,25 +1,7 @@
-const commentForm = document.getElementById("comment-form");
-const nameInput = document.getElementById("name-form");
-const textareaInput = document.getElementById("textarea-form");
 
-const handleFormSubmit = async (event) => {
-  event.preventDefault();
+const saveComment = async (data) => {
 
-  const username = nameInput.value;
-  const comment = textareaInput.value;
-
-  const cardId = event.target.getAttribute("id");
-
-  const apiComment = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments?item_id=${cardId}`;
-
-  const newComment = {
-    item_id: cardId,
-    username,
-    comment,
-  };
-
-  nameInput.value = "";
-  textareaInput.value = "";
+  const apiComment = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments/`;
 
   try {
     const response = await fetch(apiComment, {
@@ -27,7 +9,7 @@ const handleFormSubmit = async (event) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newComment),
+      body: JSON.stringify(data),
     });
 
     if (response.ok) {
@@ -37,5 +19,18 @@ const handleFormSubmit = async (event) => {
     console.log("Error en la solicitud:", error);
   }
 };
-commentForm.addEventListener("submit", handleFormSubmit);
 
+const  fetchShowComments = async (showId) => {
+  try {
+     const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments?item_id=${showId}`);
+     const data = await response.json();
+     return data.length?data:[];
+  } catch (err) {
+    return [];
+  }
+}
+
+export {
+  saveComment,
+  fetchShowComments
+}
