@@ -83,10 +83,15 @@ body {
 
 .profile-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap:3px;
 }
 
 .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width:2rem;
   height:2rem;
   background-color: #fff;
@@ -312,4 +317,7 @@ textarea {
 }
 #modal-close:hover {
   cursor: pointer;
+}
+.text-dark {
+  color: var(--darkBg);
 }
