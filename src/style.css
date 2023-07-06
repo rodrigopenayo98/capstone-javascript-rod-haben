@@ -182,11 +182,100 @@ button:hover {
   border-radius: 5px;
 }
 
-#name-form{
-  height: 30px;
-  padding: 5px;
+
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: var(--darkBg);
+  width: 100vw;
+  height: 100%;
+  padding: 40px 200px;
+  overflow: auto;
 }
-#textarea-form{
-  padding: 5px;
+.modal-content {
+  width: 90%;
+  background-color: var(--lightBg);
+  margin: 0px auto;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-body {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-close {
+  color: #fff;
+}
+.modal-hero-image {
+  width: 65%;
+  height: 80vh;
+  margin: 0px auto;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modal-show-title {
+  margin-top: 10px;
+}
+.form-list {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  gap:15px;
+  flex-direction: column;
+}
+.comments {
+  margin-top: 10px;
+}
+.comments-list {
+  list-style: none;
+  margin-top: 10px;
+}
+.show-summary {
+  margin-top: 10px;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  align-items: center;
+  margin: 20px auto 0;
+}
+.btn {
+  color: #fff;
+  background-color: var(--redBg);
+  padding: 5px 10px;
+  display: block;
+  width: 100px;
+}
+.form-submit{
+  margin-top: 10px;
+}
+input {
+  padding: 5px 10px;
+}
+textarea {
+  padding: 10px 10px;
+}
+.text-center {
+  text-align: center;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display:none;
+}
+#modal-close:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import { getSeries } from "./apiMovies";
+import {openPopUpWindow} from './utils';
 
 const d = document;
 const cardsContainer = d.querySelector("#movies-container");
@@ -9,6 +10,7 @@ const addCards = async () => {
     let cardCounter = 1;
 
     infoSeries.forEach((series) => {
+     
       const cardStructure = d.createElement("div");
       cardStructure.classList.add("card-movie");
       cardStructure.id = `card-${cardCounter}`;
@@ -26,7 +28,9 @@ const addCards = async () => {
           <button>Comments</button>
         </div>
       `;
+      cardsContainer.setAttribute('data-id',series.id);
       cardsContainer.appendChild(cardStructure);
+      cardStructure.addEventListener('click',($e) => openPopUpWindow(series.id))
       cardCounter++;
     });
   } catch (error) {
