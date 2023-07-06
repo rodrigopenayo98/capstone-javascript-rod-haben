@@ -4,6 +4,7 @@ import {getAllLikes,likeSeries} from './apiLikes';
 
 const d = document;
 const cardsContainer = d.querySelector("#movies-container");
+const counterContainer = document.getElementById('numberOfItems');
 
 const loadMovies = async () => {
   try {
@@ -76,6 +77,7 @@ const loadMovies = async () => {
       cardsContainer.appendChild(cardStructure);
       cardCounter++;
     });
+    counterContainer.innerText= infoSeries.length;
   } catch (error) {
     console.error("Error:", error);
   }
