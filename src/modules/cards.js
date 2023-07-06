@@ -30,7 +30,7 @@ const addCards = async () => {
       `;
       cardsContainer.setAttribute('data-id',series.id);
       cardsContainer.appendChild(cardStructure);
-      cardStructurex``.addEventListener('click',($e) => openPopUpWindow(series.id))
+      cardStructure.addEventListener('click',($e) => openPopUpWindow(series.id))
       cardCounter++;
     });
   } catch (error) {
