@@ -235,7 +235,9 @@ button:hover {
   padding: 20px 30px;
   overflow: hidden;
   border-radius: 15px;
+  border: 1px solid rgb(57, 57, 57);
 }
+
 
 .modal-header {
   display: flex;
@@ -271,11 +273,35 @@ button:hover {
 }
 .comments {
   margin-top: 10px;
+  border: 1px solid rgb(65, 65, 65);
+  border-radius: 15px;
+  width: 550px;
+  background-color: #3f3f40;
+  padding: 25px;
+  min-height: 350px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
+
 .comments-list {
   list-style: none;
   margin-top: 10px;
+  border: 1px solid white;
+  background-color: #000000;
+  border-radius: 15px;
+  min-height: 380px;
+  padding: 25px;
 }
+
+.comment-item{
+  border: 1px solid grey;
+  height: 45px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #000000;
+}
+
 .show-summary {
   margin-top: 10px;
 }
@@ -301,6 +327,7 @@ input {
 }
 textarea {
   padding: 10px 10px;
+  height: 250px;
 }
 .text-center {
   text-align: center;
