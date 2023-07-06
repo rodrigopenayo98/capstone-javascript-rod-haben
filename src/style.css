@@ -102,6 +102,20 @@ body {
   color: #fff;
 }
 
+.item-counter {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 100px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
 footer {
   width: 100%;
   background-color: rgb(0, 0, 0);
@@ -116,7 +130,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 1200px;
-  padding: 90px;
+  padding: 30px 90px 90px;
   margin-left: 110px;
 }
 
