@@ -77,8 +77,6 @@ footer {
   padding: 35px;
 }
 
-/* style.css */
-/* style.css */
 #movies-container {
   display: flex;
   flex-wrap: wrap;
@@ -154,5 +152,41 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+#form-test{
+  display: flex;
+  width: 380px;
+  height: 380px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color:  rgba(126, 6, 10, 0.8);
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#comment-form{
+  display: flex;
+  flex-direction: column;
+}
+
+#add-comment h4{
+  margin-bottom: 10px;
+}
+
+#comment-form input,
+#comment-form textarea,
+#comment-form button {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#name-form{
+  height: 30px;
+  padding: 5px;
+}
+#textarea-form{
+  padding: 5px;
 }
 
