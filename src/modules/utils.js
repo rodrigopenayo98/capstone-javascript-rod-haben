@@ -13,7 +13,7 @@ const openPopUpWindow = async (showId) => {
 
 const modalTemplate = (show) => {
     return `
-                <div style="backgroundImage:url('${show.image.original}')" class="modal-hero-image">
+                <div style="background-image:url(${show.image.medium})" class="modal-hero-image">
                 </div>
                 <h3 class="text-center modal-show-title">${show.name}</h3>
                 <p class='show-summary'> ${show.summary}</p>
