@@ -1,13 +1,12 @@
 import "./style.css";
-import "./modules/api.js";
-import "./modules/api2.js";
+import "./modules/apiMovies.js";
+import "./modules/apiLikes.js";
 import { addCards } from "./modules/cards.js";
-import { addCommentDiv } from "./modules/addComment.js"
-
+import { addCommentForm } from "./modules/addCommentForm.js";
 
 window.addEventListener("load", () => {
   addCards();
-  addCommentDiv();
+  addCommentForm();
 });
 
 console.log("Hello webpack!");

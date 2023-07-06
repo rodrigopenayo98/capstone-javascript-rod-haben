@@ -1,7 +1,7 @@
 const d = document;
 const formTest = d.querySelector("#form-test")
 
-const addCommentDiv = () => {
+const addCommentForm = () => {
   const divForm = d.createElement("div");
   divForm.id = "add-comment";
 
@@ -18,6 +18,6 @@ const addCommentDiv = () => {
 };
 
 // Agregar el div al documento
-formTest.appendChild(addCommentDiv());
+formTest.appendChild(addCommentForm());
 
-export { addCommentDiv };
+export { addCommentForm };
