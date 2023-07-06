@@ -108,11 +108,11 @@ Linters
 
 👤 **Rodrigo Penayo**
 
-👤 **Haben Mehari**
-
 - GitHub: [@rodrigopenayo98](https://github.com/rodrigopenayo98)
 - Twitter: [@rodrigopenayo98](https://twitter.com/rodrigopenayo98)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rodrigo-penayo-391226158/)
+
+👤 **Haben Mehari**
 
 - GitHub: [@habitoz](https://github.com/habitoz)
 - Twitter: [@habitoz](https://twitter.com/habitoz)
