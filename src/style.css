@@ -155,15 +155,16 @@ button:hover {
 }
 
 #form-test{
-  display: flex;
-  width: 380px;
-  height: 380px;
+  display: block;
+  width: 400px;
+  height: 400px;
   border: 1px solid white;
   border-radius: 15px;
   background-color:  rgba(126, 6, 10, 0.8);
   align-items: center;
   justify-content: center;
   margin: 10px;
+  padding: 25px;
 }
 
 #comment-form{
@@ -171,7 +172,7 @@ button:hover {
   flex-direction: column;
 }
 
-#add-comment h4{
+#form-test h4{
   margin-bottom: 10px;
 }
 
@@ -193,13 +194,18 @@ button:hover {
   padding: 40px 200px;
   overflow: auto;
 }
+
 .modal-content {
   width: 90%;
-  background-color: var(--lightBg);
+  background-color: rgba(14, 14, 14, 0.4);
   margin: 0px auto;
   padding: 20px 30px;
   overflow: hidden;
+  border-radius: 15px;
 }
+
+
+
 .modal-header {
   display: flex;
   align-items: center;
@@ -215,13 +221,13 @@ button:hover {
   color: #fff;
 }
 .modal-hero-image {
-  width: 65%;
-  height: 80vh;
+  width: 455px;
+  height: 100%;
   margin: 0px auto;
-  background-origin: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
+
 .modal-show-title {
   margin-top: 10px;
 }

@@ -12,9 +12,8 @@ const openPopUpWindow = async (showId) => {
 }
 
 const modalTemplate = (show) => {
-    return `
-                <div style="background-image:url(${show.image.medium})" class="modal-hero-image">
-                </div>
+    return `     
+                <img src="${show.image.medium}" alt="" class="modal-hero-image">
                 <h3 class="text-center modal-show-title">${show.name}</h3>
                 <p class='show-summary'> ${show.summary}</p>
                 <div class="comments">
@@ -22,18 +21,14 @@ const modalTemplate = (show) => {
                   <ul class="comments-list">
                   </ul>
                 </div>
-                <form class="comment-form" id="form-test" action="" method="post">
-                  <h2 class="form-header">Add Comment</h2>
-                  <ul class="form-list">
-                    <li>
-                      <input type="text" name="name" placeholder="Your Name"/>
-                    </li>
-                    <li class="form-input">
-                      <textarea name="insight" id="" cols="30" rows="3" placeholder="Your Insights"></textarea>
-                    </li>
-                  </ul>
-                  <button title="comment" class="form-submit btn" type="submit">Comment</button>
+                <div id="form-test">
+                <h4>Add a Comment</h4>
+                <form action="" id="comment-form">
+                  <input id="name-form" type="text" placeholder="Your name">
+                  <textarea id="textarea-form" name="" id="" cols="30" rows="10" placeholder="Your insights..."></textarea>
+                  <button type="submit" id="btn-form">Comment</button>
                 </form>
+                </div>
             </div>
         `
 }
