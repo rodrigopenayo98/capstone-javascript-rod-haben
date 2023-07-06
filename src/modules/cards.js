@@ -3,7 +3,7 @@ import { getSeries } from "./api";
 const d = document;
 const cardsContainer = d.querySelector("#movies-container");
 
-const addDummyCards = async () => {
+const addCards = async () => {
   try {
     const infoSeries = await getSeries();
     infoSeries.forEach((series) => {
@@ -21,7 +21,6 @@ const addDummyCards = async () => {
         </div>
         <div class="cc2">
           <button>Comments</button>
-          <button>Reservations</button>
         </div>
       `;
       cardsContainer.appendChild(cardStructure);
@@ -31,4 +30,4 @@ const addDummyCards = async () => {
   }
 };
 
-export { addDummyCards };
+export { addCards };
