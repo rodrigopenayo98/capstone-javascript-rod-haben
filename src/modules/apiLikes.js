@@ -20,9 +20,26 @@ const getSeriesLikes = async (showId) => {
         }
 }
 
+const likeSeries = async (showId) => {
+    try {
+        const response = await fetch(BaseUrl+'apps/'+AppId+'/likes/',{
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({item_id:showId}),
+        });
+        return {
+            error:false
+        }
+    } catch (error) {
+        return {error:true}
+    }
+}
 export {
     getSeriesLikes,
-    getAllLikes
+    getAllLikes,
+    likeSeries
 }
 
 
