@@ -1,6 +1,9 @@
 
-<!-- TABLE OF CONTENTS -->
-<!-- TABLE OF CONTENTS -->
+<div align="center">
+
+  <h2><b>Awesome-Series</b></h2>
+
+</div>
 
 # 📗 Table of Contents
 
@@ -21,11 +24,12 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
-# 📖 [JavaScript Capstone Project - Your API-based Webapp] 
+# 📖 [Awesome-Series] 
 
-This is an application that has the function of being a reminder of pending tasks.
+This is an application allows users to browse active tv shows from tvShow Api. It also allows them to comment on shows and see what others say about the show.
+
+   ### [Video](https://drive.google.com/file/d/1pqZ3MZCuONYJt4kgM12R7zsJrBi0Syyl/view?usp=sharing)
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -53,56 +57,71 @@ This is an application that has the function of being a reminder of pending task
   </ul>
 </details>
 
-<!-- Features -->
 
 ### Key Features 
 
-- *[Add More Functionalities]*
-- *[Add More Movies Cards]*
-- *[Add Video Player]*
+- *Browse Active Shows*
+- *Comment On Shows*
+- *See What Other Say About The Show*
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
+
 
 ## 💻 Getting Started 
 
 To get a local copy up and running, follow these steps.
-just visit my repo folder (https://github.com/rodrigopenayo98/capstone-javascript-rod-haben/tree/dev)
 
 ### Prerequisites
 
 In order to run this project you need:
 
-any code editor 
-but mostly use Vs Code and Sublime Text
-
+* node js
+* any code editor but mostly use Vs Code and Sublime Text.
 ### Setup
 
-Clone this repository to your desired folder: 
-(https://github.com/rodrigopenayo98/capstone-javascript-rod-haben.git)
+Clone this repository to your desired folder:
+
+```sh
+  cd Awesome-Series
+
+  git clone https://github.com/rodrigopenayo98/capstone-javascript-rod-haben.git
+
+```
 
 ### Install
 
 Install this project with:
 
-GitHub and VS Code.
+```sh
+ npm install
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
-Linters and Git Commands.
+```sh
+  npm run start
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
-Linters
+```sh
+  npm run test
+```
 
+### Run Linter Tests
 
-<!-- AUTHORS -->
+To run linter tests, run the following command:
+
+```sh
+  npx stylelint "**/*.{css,scss}"
+  npx eslint .
+```
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -121,16 +140,16 @@ Linters
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--**[Responsive Design]**
--**[Improve CSS Styles]**
+- **Responsive Design**
+- **Improve CSS Styles**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -140,7 +159,7 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
+
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -149,16 +168,15 @@ If you like this project give a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Microverse
+We would like to thank Microverse community.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 ## 📝 License
 This project is [MIT](./MIT.md) licensed.
 
