@@ -52,6 +52,7 @@ const loadMovies = async () => {
       cardFooter.classList.add('cc2');
       const commentBtn = document.createElement('button');
       commentBtn.innerText = 'Comment';
+      commentBtn.addEventListener('click', () => openPopUpWindow(series.id));
       cardFooter.appendChild(commentBtn);
 
       cardStructure.appendChild(showImage);
