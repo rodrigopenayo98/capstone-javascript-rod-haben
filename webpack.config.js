@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.filename$/,
-        use: ["loader-b", "loader-a"]
+        use: ['loader-b', 'loader-a'],
       },
       {
         test: /\.css$/,
@@ -25,8 +25,3 @@ module.exports = {
     ],
   },
 };
-
-
-
-
-
