@@ -59,13 +59,14 @@ main::before {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Permite que los eventos del mouse pasen a través del pseudo-elemento */
+  pointer-events: none;
 }
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   font-size: 40px;
-  margin-right: 5px;
+  margin-right: 15px;
+
 }
 
 .nav {
@@ -83,6 +84,10 @@ main::before {
   width: 15%;
   display: flex;
   align-items: center;
+}
+
+.counter{
+  width: auto;
 }
 
 .app-logo img {
@@ -158,8 +163,6 @@ footer {
   padding: 35px;
 }
 
-/* url('./assets/images/bg-capstone.jpg'); */
-
 #movies-container {
   display: flex;
   flex-wrap: wrap;
@@ -210,12 +213,12 @@ footer {
 }
 
 .cc1-1 i {
-  margin-right: 5px; /* Ajusta el margen derecho según tus preferencias */
+  margin-right: 5px;
 }
 
 .cc1-1 p {
   margin: 0;
-  white-space: nowrap; /* Evita el salto de línea entre el ícono y el párrafo */
+  white-space: nowrap;
 }
 
 .cc2 {
