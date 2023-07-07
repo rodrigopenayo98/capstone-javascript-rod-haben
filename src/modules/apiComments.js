@@ -1,6 +1,8 @@
-const saveComment = async (data) => {
-  const apiComment = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments/';
+import { API_BASE_URL, APP_ID } from './constants.js';
 
+const apiComment = `${API_BASE_URL}apps/${APP_ID}/comments/`;
+
+const saveComment = async (data) => {
   try {
     const response = await fetch(apiComment, {
       method: 'POST',
@@ -20,7 +22,7 @@ const saveComment = async (data) => {
 
 const fetchShowComments = async (showId) => {
   try {
-    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments?item_id=${showId}`);
+    const response = await fetch(`${apiComment}?item_id=${showId}`);
     const data = await response.json();
     return data.length ? data : [];
   } catch (err) {
