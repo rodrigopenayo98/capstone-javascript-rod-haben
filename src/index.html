@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Capstone JS</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="app-logo">
+        <span class="material-symbols-outlined icon-play">
+          play_circle
+        </span>
+        <div class="counter">
+          <p> TVshow (<span class="" id="numberOfItems"></span>)</p>
+       </div>
+      </div>
+      <div class="app-navigation">
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="">Movies</a></li>
+          <li class="nav-list-item"><a href="">Shows</a></li>
+          <li class="nav-list-item"><a href="">Shows 2</a></li>
+        </ul>
+      </div>
+      <div class="user-navigation">
+        <ul class="nav-list">
+          <li class="profile-container">
+            <div class="profile"> <i class="text-dark fa fa-user"></i></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="movies-container" id="movies-container">
+      
+    </section>
+    <section>
+      <div class="modal hide" id="modal" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <div></div>
+            <div class="modal-close" id="modal-close"> <i class="fa fa-times"></i></div>
+          </div>
+          <div class="modal-body" id="modal-body"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h4>Created by Microverse under CC license</h4>
+    <div id="bottom-footer"></div>
+  </footer>
+</body>
+</html>
