@@ -1,6 +1,6 @@
 import { API_BASE_URL, APP_ID } from './constants.js';
 
-const apiComment = `${API_BASE_URL}apps/${APP_ID}/comments/`;
+const apiComment = `${API_BASE_URL}apps/${APP_ID}/comments`;
 
 const saveComment = async (data) => {
   try {
