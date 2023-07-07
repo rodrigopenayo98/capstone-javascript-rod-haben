@@ -1,5 +1,5 @@
 import { getSeries } from "./apiMovies";
-import {openPopUpWindow} from './utils';
+import {openPopUpWindow,countNumberOfShows} from './utils';
 import {getAllLikes,likeSeries} from './apiLikes';
 
 const d = document;
@@ -77,7 +77,7 @@ const loadMovies = async () => {
       cardsContainer.appendChild(cardStructure);
       cardCounter++;
     });
-    counterContainer.innerText= infoSeries.length;
+    countNumberOfShows(counterContainer,infoSeries);
   } catch (error) {
     console.error("Error:", error);
   }

@@ -2,6 +2,10 @@ import {saveComment,fetchShowComments} from './apiComments';
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 
+const countNumberOfShows = (countDomm,shows=[]) => {
+    return countDomm.innerText = shows.length;
+}
+
 const fetchShowDetail = async (showId) => {
     try {
         const response = await fetch('https://api.tvmaze.com/shows/'+showId);
@@ -78,5 +82,6 @@ const modalTemplate = (show) => {
 }
 
 export {
-    openPopUpWindow
+    openPopUpWindow,
+    countNumberOfShows
 }
