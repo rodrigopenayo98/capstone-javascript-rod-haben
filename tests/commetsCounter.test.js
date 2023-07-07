@@ -1,4 +1,4 @@
-import { fetchShowComments } from "../apiComments.js"
+import { fetchShowComments } from "../src/modules/apiComments.js"
 
 describe('fetchShowComments', () => {
   test('should return an array of comments when valid showId is provided', async () => {
