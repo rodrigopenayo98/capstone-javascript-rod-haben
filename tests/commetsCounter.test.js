@@ -1,29 +1,41 @@
-import { fetchShowComments } from "../src/modules/apiComments.js"
+import { fetchShowComments } from '../src/modules/apiComments.js';
+
+const mockFetch = jest.fn(() =>
+  Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve([{ comment: 'Example comment' }]),
+  })
+);
+
+global.fetch = mockFetch;
 
 describe('fetchShowComments', () => {
-  test('should return an array of comments when valid showId is provided', async () => {
-    const showId = '123';
-    const comments = await fetchShowComments(showId);
-
-    expect(Array.isArray(comments)).toBe(true);
-    expect(comments.length).toBeGreaterThanOrEqual(0);
+  afterEach(() => {
+    mockFetch.mockClear();
   });
 
-  test('should return an empty array when invalid showId is provided', async () => {
-    const showId = 'invalid'; 
+  it('should fetch comments for a show successfully', async () => {
+    const showId = 'example-show-id';
+
     const comments = await fetchShowComments(showId);
 
-    expect(Array.isArray(comments)).toBe(true);
-    expect(comments.length).toBe(0);
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+    expect(mockFetch).toHaveBeenCalledWith(
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RfJpwLbuNZkYmafYdHPm/comments?item_id=${showId}`
+    );
+    expect(comments).toEqual([{ comment: 'Example comment' }]);
   });
 
-  test('should return an empty array when an error occurs', async () => {
-    const showId = '123';
-    jest.spyOn(global, 'fetch').mockImplementationOnce(() => {
-      throw new Error('Network error');
-    });
+  it('should handle error in the request', async () => {
+    mockFetch.mockImplementationOnce(() =>
+      Promise.reject(new Error('Request failed'))
+    );
+
+    const showId = 'example-show-id';
+
     const comments = await fetchShowComments(showId);
-    expect(Array.isArray(comments)).toBe(true);
-    expect(comments.length).toBe(0);
+
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+    expect(comments).toEqual([]);
   });
 });
