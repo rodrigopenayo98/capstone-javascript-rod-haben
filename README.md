@@ -39,21 +39,21 @@ This is an application allows users to browse active tv shows from tvShow Api. I
 <details>
   <summary>HTML</summary>
   <ul>
-    <li><a href="https://html.org/">HTML</a></li>
+    <li><a href="https://lenguajehtml.com/html/">HTML</a></li>
   </ul>
 </details>
 
 <details>
   <summary>CSS</summary>
   <ul>
-    <li><a href="https://css.com/">CSS</a></li>
+    <li><a href="https://lenguajecss.com/css/">CSS</a></li>
   </ul>
 </details>
 
 <details>
   <summary>JavaScript</summary>
   <ul>
-    <li><a href="https://jacascript.com/">JavaScript</a></li>
+    <li><a href="https://lenguajejs.com/javascript/">JavaScript</a></li>
   </ul>
 </details>
 
